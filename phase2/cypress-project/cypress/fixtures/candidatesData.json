@@ -1,0 +1,41 @@
+[
+  {
+    "id": "TC_Rec_Cand_01",
+    "description": "Add valid candidate",
+    "firstName": "Henok",
+    "lastName": "Haile",
+    "email": "john.doe@example.com",
+    "vacancy": "Software Engineer",
+    "contact":"0912344255"
+  },
+  {
+    "id": "TC_Rec_Cand_02",
+    "description": "Mandatory fields missing",
+    "firstName": "",
+    "lastName": "",
+    "email": "invalid@example.com",
+    "vacancy": ""
+  },
+  {
+    "id": "TC_Rec_Cand_03",
+    "description": "Search candidates by job title",
+    "searchCriteria": {
+      "jobTitle": "QA Lead"
+    }
+  },
+  {
+    "id": "TC_Rec_Cand_04",
+    "description": "Edit candidate details",
+    "existingCandidate": {
+      "email": "john.doe@example.com"
+    },
+    "editData": {
+      "lastName": "Smith"
+    }
+  },
+  {
+    "id": "TC_Rec_Cand_05",
+    "description": "Delete candidate",
+    "candidateEmailToDelete": "john.doe@example.com"
+  }
+]

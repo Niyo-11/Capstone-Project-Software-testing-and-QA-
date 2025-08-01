@@ -1,0 +1,38 @@
+[
+  {
+    "id": "TC_Login_01",
+    "description": "Valid login",
+    "username": "Admin",
+    "password": "admin123",
+    "expectedOutcome": "success"
+  },
+  {
+    "id": "TC_Login_02",
+    "description": "Invalid login with incorrect password",
+    "username": "Admin",
+    "password": "InvalidPass",
+    "expectedOutcome": "error_invalid_credentials"
+  },
+  {
+    "id": "TC_Login_03",
+    "description": "Empty username and password",
+    "username": "",
+    "password": "",
+    "expectedOutcome": "error_empty_fields"
+  },
+  {
+    "id": "TC_Login_04",
+    "description": "Account lock after multiple failed attempts",
+    "username": "Admin",
+    "password": "InvalidPass",
+    "expectedOutcome": "error_account_locked",
+    "repeatAttempts": 5
+  },
+  {
+    "id": "TC_Login_05",
+    "description": "Password field encryption",
+    "username": "AnyUser",
+    "password": "AnyPass",
+    "expectedOutcome": "password_masked"
+  }
+]

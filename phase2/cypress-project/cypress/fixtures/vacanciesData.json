@@ -1,0 +1,38 @@
+[
+  {
+    "id": "TC_Rec_Vac_01",
+    "description": "Add new vacancy",
+    "jobTitle": "QA Engineer",
+    "hiringManager": "Jane Manager",
+    "numberOfPositions": 3,
+    "description": "Responsible for manual and automated testing"
+  },
+  {
+    "id": "TC_Rec_Vac_02",
+    "description": "Mandatory fields missing",
+    "jobTitle": "",
+    "hiringManager": "",
+    "numberOfPositions": null,
+    "description": ""
+  },
+  {
+    "id": "TC_Rec_Vac_03",
+    "description": "Search vacancies",
+    "searchCriteria": {
+      "jobTitle": "QA Engineer"
+    }
+  },
+  {
+    "id": "TC_Rec_Vac_04",
+    "description": "Edit vacancy details",
+    "existingVacancyTitle": "QA Engineer",
+    "editData": {
+      "numberOfPositions": 5
+    }
+  },
+  {
+    "id": "TC_Rec_Vac_05",
+    "description": "Delete vacancy",
+    "vacancyTitleToDelete": "QA Engineer"
+  }
+]
