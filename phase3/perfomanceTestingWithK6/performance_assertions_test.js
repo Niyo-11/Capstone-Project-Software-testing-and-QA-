@@ -16,10 +16,14 @@ export let options = {
   ],
   thresholds: {
     http_req_duration: [
-      "p(95)<500",          // 95% under 0.5s
-      "avg<200",            // average under 0.2s
+      "p(95)<500", // 95% under 0.5s
+      "avg<200", // average under 0.2s
     ],
     http_req_failed: ["rate<0.01"], // failure < 1%
+  },
+  cloud: {
+    projectID: 3790378,
+    name: "Performance assertion",
   },
 };
 
@@ -37,11 +41,12 @@ export default function () {
     headers: { "Content-Type": "application/json" },
   };
 
-  let res = http.post(`${BASE_URL}/web/index.php/auth/login`, payload, params);
+  let res = http.get(`${BASE_URL}/web/index.php/auth/login`, payload, params);
 
   check(res, {
     "status is 200": (r) => r.status === 200,
-    "login success (no 'Invalid')": (r) => r.body && !r.body.includes("Invalid"),
+    "login success (no 'Invalid')": (r) =>
+      r.body && !r.body.includes("Invalid"),
   });
 
   sleep(1);

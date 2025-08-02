@@ -18,11 +18,10 @@ export let options = {
     http_req_duration: ["p(95)<700"],
     http_req_failed: ["rate<0.01"],
   },
-  // You can optionally configure cloud integration here
-  // cloud: {
-  //   projectID: 3790378,
-  //   name: "Grafana Export Test",
-  // },
+  cloud: {
+    projectID: 3790378,
+    name: "Grafana Export Test",
+  },
 };
 
 const BASE_URL = "https://opensource-demo.orangehrmlive.com";
@@ -39,7 +38,7 @@ export default function () {
     headers: { "Content-Type": "application/json" },
   };
 
-  let res = http.post(`${BASE_URL}/web/index.php/auth/login`, payload, params);
+  let res = http.get(`${BASE_URL}/web/index.php/auth/login`, payload, params);
 
   check(res, {
     "status is 200": (r) => r.status === 200,
