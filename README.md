@@ -77,9 +77,7 @@ k6 run --out influxdb=http://localhost:8086/k6 grafana_export_test.js
 
 For questions or issues, please contact:
 
-**Your Name**  
-Email: your.email@example.com
-
+Email: 
 ## License
 
 This project is open source and available under the MIT License.
